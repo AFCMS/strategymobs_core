@@ -19,7 +19,8 @@
         "PcgRandom",
         "ItemStack",
         "AreaStore",
-        "vector"
+        "vector",
+        "arena_lib"
     ],
     "workspace.ignoreDir": [
         ".luacheckrc"
