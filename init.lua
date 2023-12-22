@@ -120,15 +120,15 @@ minetest.register_entity("strategymobs_core:unit_selector", {
         })
     end,
     update_rotation = function(self)
-        self.object:set_rotation(vector.new(0, (self.player == 1 and (math.pi / 2) or (math.pi)), 0))
+        self.object:set_rotation(vector.new(0, (self.player == 1 and (math.pi / 2) or (math.pi * 1.5)), 0))
     end,
     update_graphics = function(self)
         minetest.log("error", "Updating graphics:" .. self.unit .. ", " .. self.player)
         if self.unit == 0 or self.player == 0 then
             self:make_invisible()
         else
-            self:update_textures()
             self:update_rotation()
+            self:update_textures()
         end
     end,
     make_invisible = function(self)
