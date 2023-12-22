@@ -66,6 +66,20 @@ local function get_arena_players(arena)
     return player_1_obj, player_2_obj
 end
 
+---The player attach point
+minetest.register_entity("strategymobs_core:attach_chair", {
+    initial_properties = {
+        physical = false,
+        visual = "sprite",
+        mesh = "strategymobs_unit.obj",
+        use_texture_alpha = true,
+        textures = { "blank.png" }, --by default invisible
+        visual_size = vector.new(2, 2, 2),
+        pointable = false,
+        static_save = false,
+    },
+})
+
 minetest.register_entity("strategymobs_core:unit_selector", {
     initial_properties = {
         selectionbox = { -0.16, -0.16, -0.16, 0.16, 0.16, 0.16 },
