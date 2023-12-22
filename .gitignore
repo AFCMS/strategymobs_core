@@ -1,1 +1,17 @@
+# VSCode user configuration
 .vscode/settings.json
+
+# JetBrains IDEs configuration folder
+.idea
+
+# Blender backup files
+*.blend1
+*.blend2
+*.blend3
+
+# DrawIO temporary files
+*.bkp
+*.dtmp
+
+# MTL files
+*.mtl
