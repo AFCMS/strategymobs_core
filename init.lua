@@ -104,8 +104,8 @@ minetest.register_entity("strategymobs_core:unit_selector", {
         --})
         if clicker:is_player() then
             local item = clicker:get_wielded_item()
-            local g = minetest.get_item_group(item.name, "strategymobs_unit")
-            --minetest.log("error", "CLICK:" .. minetest.get_item_group(item.name, "strategymobs_unit"))
+            local g = minetest.get_item_group(item:get_name(), "strategymobs_unit")
+
             self.unit = g
             local player_1, _ = get_arena_players(select(2, arena_lib.get_arena_by_name("strategymobs", self.arena_name)))
             self.player = (clicker == player_1 and 1 or 2)
